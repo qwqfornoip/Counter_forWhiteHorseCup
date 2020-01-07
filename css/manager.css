@@ -1,0 +1,16 @@
+﻿@font-face {
+	font-family: "count";
+	src: url("../font/LHFFullBlock.ttf"),
+		url("../font/LHFFullBlock.otf"),
+		url("../font/LHFFullBlock.svg"),
+		url("../font/LHFFullBlock.eot");
+	color: #fff;
+}
+@font-face {
+	font-family: "button";
+	src: url("../font/本墨悠圆.ttf"),
+		url("../font/本墨悠圆.otf"),
+		url("../font/本墨悠圆.svg"),
+		url("../font/本墨悠圆.eot");
+	color: #fff;
+}
