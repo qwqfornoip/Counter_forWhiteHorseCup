@@ -5,39 +5,19 @@
 	<title>计时器-白马杯</title>
 	<link type="text/css" href="css/pagechange.css" rel="stylesheet"/>
 	<link type="text/css" href="css/main.css" rel="stylesheet"/>
+	<link type="text/css" href="css/myAnimation.css" rel="stylesheet"/>
+	<script src="js/jquery-1.8.0.min.js" type="text/javascript"></script>
 </head>
 <body>
 	<img src="img/logoschool.png" alt="泰达一中" style="position: absolute; top: 0; left: 0; background:transparent; width="200"; height="100";"/>
 	<img src="img/logoshop.png" alt="新东方" style="position: absolute; top: 5%; right: 5%; background:transparent; width="100"; height="50";"/>
-	<div id="count"><iframe src="html/counter1.html" id="count" width="100%" height="100%" frameborder="no"></iframe></div> <!-- 计时 -->
+	<div id="count"><iframe src="html/counter1.html" id="count" width="100%" height="100%" frameborder="no" id="page"></iframe></div> <!-- 计时 -->
 	<div id="pagechange"> <!-- 换页 -->
 		<div class="counter" style="white-space:pre;"></div>
 		<button id="change" class="paginate left"><i></i><i></i></button>
 		<button id="change" class="paginate right"><i></i><i></i></button>
 		<button id="ex">奇袭</button>
-		<script type="text/javascript">
-			var pl = document.querySelector('.paginate.left');
-			var pr = document.querySelector('.paginate.right');
-			pl.onclick = slide.bind(this, -1);
-			pr.onclick = slide.bind(this, 1);
-			var index = 0, total = 8;
-			function slide(offset) {
-				index = Math.min(Math.max(index + offset, 0), total - 1);
-				var text;
-				if (index == 0) text = "正方立论，反方质询";
-				else if (index == 1) text = "反方立论，正方质询";
-				else if (index == 2) text = "双方申论";
-				else if (index == 3) text = "双方对辩";
-				else if (index == 4) text = "盘问";
-				else if (index == 5) text = "小结";
-				else if (index == 6) text = "自由辩";
-				else if (index == 7) text = "结辩";
-				document.querySelector('.counter').innerHTML = text + "\n" + (index + 1) + ' / ' + total;
-				pl.setAttribute('data-state', index === 0 ? 'disabled' : '');
-				pr.setAttribute('data-state', index === total - 1 ? 'disabled' : '');
-			}
-			slide(0);
-		</script>
 	</div>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
